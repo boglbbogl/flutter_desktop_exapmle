@@ -1,17 +1,17 @@
 import 'package:hive/hive.dart';
 
-part 'person.g.dart';
+part 'member.g.dart';
 
 @HiveType(typeId: 1)
-class Person {
-  @HiveField(1)
+class Member {
+  @HiveField(0)
   final String name;
-  @HiveField(2)
+  @HiveField(1)
   final int position;
-  @HiveField(3)
+  @HiveField(2)
   final String store;
 
-  Person(this.name, this.position, this.store);
+  Member(this.name, this.position, this.store);
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> _map = {};

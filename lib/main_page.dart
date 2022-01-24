@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop_exapmle/app_size.dart';
 import 'package:flutter_desktop_exapmle/example_page.dart';
 import 'package:flutter_desktop_exapmle/home_page.dart';
-import 'package:flutter_desktop_exapmle/person_page.dart';
+import 'package:flutter_desktop_exapmle/member_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class MainPage extends StatelessWidget {
         body: TabBarView(children: [
           // HomePage(),
           MyHomePage(),
-          PersonPage(),
+          MemberPage(),
           Container(
             width: 100,
             height: 100,

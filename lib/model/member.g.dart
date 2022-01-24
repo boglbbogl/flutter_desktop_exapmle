@@ -1,37 +1,37 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'person.dart';
+part of 'member.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class PersonAdapter extends TypeAdapter<Person> {
+class MemberAdapter extends TypeAdapter<Member> {
   @override
   final int typeId = 1;
 
   @override
-  Person read(BinaryReader reader) {
+  Member read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return Person(
-      fields[1] as String,
-      fields[2] as int,
-      fields[3] as String,
+    return Member(
+      fields[0] as String,
+      fields[1] as int,
+      fields[2] as String,
     );
   }
 
   @override
-  void write(BinaryWriter writer, Person obj) {
+  void write(BinaryWriter writer, Member obj) {
     writer
       ..writeByte(3)
-      ..writeByte(1)
+      ..writeByte(0)
       ..write(obj.name)
-      ..writeByte(2)
+      ..writeByte(1)
       ..write(obj.position)
-      ..writeByte(3)
+      ..writeByte(2)
       ..write(obj.store);
   }
 
@@ -41,7 +41,7 @@ class PersonAdapter extends TypeAdapter<Person> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is PersonAdapter &&
+      other is MemberAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
